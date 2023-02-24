@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css" />
+
+</head>
+
+<body>̥
+  <div id="header">
+    <section id="container">
+      <div id="container1">
+        <div class="welcomeForm">
+          <div class="welcome-top">
+            <h1>Welcome back, Investor</h1>
+            <!-- <br> -->
+            <p id="date"></p>
+          </div>
+          <div class="selectDate">
+            <div class="SDfrom">
+              <h3>From</h3>
+              <input id="startDate" class="inputDate" type="date" min="2019-08-01" max="2020-03-11" />
+            </div>
+            <div>
+              <h3>To</h3>
+              <input id="endDate" class="inputDate" type="date" min="2019-08-02" max="2020-03-12" />
+            </div>
+          </div>
+          <div class="welcomeForm-last">
+            <button id="calculate" >Calculate</button>
+          </div>
+        </div>
+
+        <div id="rankdiv" class="ranking">
+          <div id="table_data" class="table_data">
+            <h2 class="rank">Ranking
+              <!-- <button>Commodities</button> -->
+            </h2>
+            <table id="table" class="tab">
+              <tbody id="tbody">
+                <tr>
+                  <td><b>Rank</b> </td>
+                  <td><b>Stock A</b></td>
+                  <td><b>Stock B</b></td>
+                  <td><b>Profit</b></td>
+                  <td><b>Correlation</b></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="container2"  >
+        <div class="nifty">
+          <h3 id="pairname"></h3>
+          <p>NIFTY50</p>
+          <div class="space">
+            <div id="graphcontainer">
+              <canvas id="myChart" height="15vh" width="30vh"></canvas>
+            </div>
+
+          </div>
+          <hr />
+        </div>
+        <div class="profit">
+          <p>Net Profit</p>
+          <h2 id="netprofit"></h2>
+          <hr />
+          <div class="profit-middle">
+            <div>
+              <h3>Rank</h3>
+              <p id="rank_val"></p>
+            </div>
+            <div class="vl"></div>
+            <div>
+              <h3>Correlation</h3>
+              <p id="correlation_val"></p>
+            </div>
+          </div>
+          <hr />
+          <!-- <div class="profit-button">
+            <button id='correlation' class="correlation">Correlation</button>
+
+            <button id='rsi' class="rsi" onclick="plot(label,info,cl1,'line')">RSI</button>
+
+            <button class="adc" id="stock">Stock</button>
+          </div> -->
+
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- <script src="graph.js"></script> -->
+  <script src="myscript.js"></script>
+</body>
+
+<script></script>
+
+</html>

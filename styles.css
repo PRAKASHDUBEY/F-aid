@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,600&display=swap');
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-9'); 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: auto;
+  padding: 0;
+  min-height: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#header {
+  margin-right: 0;
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  width: fit-content;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  /* border: 2px solid rgb(5, 222, 56); */
+}
+
+#header::-webkit-scrollbar {
+  display: none;
+}
+
+/* #dashboard {
+  display: flex;
+  flex: 0.1;
+  background-color: aliceblue;
+  border: 2px solid rgb(183, 13, 95);
+} */
+#container {
+  margin: 0;
+  padding: 0;
+  width: 234vh;
+  /* If above commented margin shown, if not then mobile view is wrong */
+  display: flex;
+  /* width: auto; */
+  flex: 0.9;
+  background-color: rgb(216, 216, 216);
+  flex-direction: column;
+  scroll-behavior: smooth;
+  /* justify-content: center; */
+  /* background-color: rgb(127, 176, 218); */
+}
+
+@media only screen and (max-width: 1000px) {
+  .ranking {
+    width: 1000px;
+  }
+
+  #header {
+    width: 320vh;
+  }
+
+  .nifty {
+    width: 100vh;
+  }
+}
+
+#container1 {
+  /* background-color: aqua; */
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  /* border: 2px solid red; */
+}
+
+#container2 {
+  background-color: white;
+  display: flex;
+  margin: 1rem;
+  border-radius: 2rem;
+  /* justify-content: center;
+  align-items: center; */
+  height: 50%;
+  /* border: 2px solid rgb(218, 218, 28); */
+  visibility: hidden;
+}
+
+.welcomeForm {
+  /* height: 50%; */
+  /* margin: 1rem; */
+  display: flex;
+  flex-direction: column;
+  flex: 0.5;
+  padding: 1rem;
+  width: 30vh;
+  /* margin-top: 1rem; */
+}
+
+.welcome-top {
+  margin: 5rem 0rem 0rem 0rem;
+  /* margin: auto; */
+  padding: 1rem;
+  top: 1rem;
+  /* border: 2px solid red; */
+}
+
+.selectDate {
+  display: flex;
+  padding: 1rem;
+  margin: 1rem;
+  /* padding: rem; */
+  /* border: 2px solid red; */
+}
+
+.selectDate h3 {
+  padding: 0 15px;
+  font-size: 25px;
+}
+
+.SDfrom {
+  padding-right: 10px;
+}
+
+.inputDate {
+  font-size: 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: rgb(131, 114, 114);
+  padding: 1px;
+  /* border: 2px solid red; */
+}
+
+.inputDate {
+  border-color: rgb(81, 71, 71);
+}
+
+.welcomeForm-last {
+  margin: 1rem;
+  padding: 1rem;
+  text-indent: 20px;
+  /* border: 2px solid rgb(16, 170, 108); */
+}
+
+.welcomeForm-last :hover {
+  text-decoration: solid;
+  /* text-transform: uppercase; */
+
+}
+
+/* Button css start */
+.welcomeForm button {
+  position: relative;
+  background-color: black;
+  border-radius: 4em;
+  font-size: 16px;
+  color: white;
+  padding: 0.8em 1.8em;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+}
+
+.welcomeForm button:hover {
+  transition-duration: 0.1s;
+  background-color: #838b8a;
+}
+
+.welcomeForm button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  box-shadow: 0 0 10px 40px rgb(112, 163, 163);
+}
+
+.welcomeForm button:active:after {
+  box-shadow: 0 0 0 0 rgb(150, 128, 78);
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.welcomeForm button:active {
+  top: 1px;
+}
+.profit-button button{
+  border-radius: 4rem;
+}
+
+/* button end */
+
+/* Css for table */
+table {
+  border-collapse: collapse
+}
+
+tr:hover {
+  background-color: rgb(208, 221, 221);
+  
+}
+tr.active td {
+  background-color: #e81313;
+}
+tr:active::after {
+  background-color: rgb(68, 69, 69);
+  
+}
+
+.ranking {
+  display: flex;
+  flex: 0.5;
+  overflow: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  justify-content: center;
+  height: 70vh;
+  min-width: 40vh;
+  width: auto;
+  /* max-width: 100vh; */
+  visibility: hidden;
+}
+
+.ranking::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
+}
+
+.ranking table {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.ranking table tr {
+  padding-left: 10px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+#tbody tr{
+  padding-right: 3px;
+}
+.ranking table tr td{
+  padding: 3px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.ranking h2 {
+  display: flexbox;
+  justify-content: flex-start;
+  flex-direction: row;
+  /* float: left; */
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.ranking .rank button{
+  float: right;
+  padding: 8px;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+} 
+.ranking .rank button:hover{
+  background-color: black;
+  color: white;
+}
+.ranking .tab {
+  font-weight: 700;
+
+}
+
+.tab {
+  width: 100%;
+}
+
+.ranking div {
+  background-color: white;
+  width: auto;
+  /* height: 200px; */
+  /* margin: 2rem; */
+  padding: 1rem;
+  border-radius: 2rem;
+  border: 2px solid rgb(20, 8, 8);
+  overflow-y: scroll;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Poppins', sans-serif;
+}
+
+.ranking div::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
+}
+
+/* conatiner 2 */
+.nifty {
+  display: flex;
+  flex: 0.7;
+  margin: 1rem;
+  padding: 1rem;
+  /* justify-content: center; */
+  flex-direction: column;
+  /* border: 2px solid rgb(54, 32, 192); */
+}
+
+.nifty h3 {
+  margin: 5px;
+}
+
+.nifty p {
+  margin: 5px;
+}
+
+.profit {
+  display: flex;
+  flex: 0.3;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
+  padding: 1rem;
+  /* border: 2px solid red; */
+}
+
+.vl {
+  border-left: 1px solid black;
+  height: 100px;
+  /* border: 2px solid red; */
+}
+
+.profit-middle {
+  margin: 1rem;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  /* border: 2px solid red; */
+}
+
+.profit-middle div {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: auto;
+}
+
+.profit-middle p {
+  font-weight: 900;
+  font-size: larger;
+}
+
+.profit-button {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem;
+  /* border: 2px solid red; */
+}
+
+.profit-button button {
+  border: none;
+  background-color: white;
+  font-size: large;
+  padding: 1rem;
+  /* border-radius: 1rem; */
+  /* border: 2px solid red; */
+}
+
+.profit-button button:hover {
+  background-color: rgb(5, 1, 1);
+  color: white;
+}
+
+.space {
+  height: auto;
+  /* border: 2px solid red; */
+}
+
+#graphcontainer {
+  height: 80vh;
+}
