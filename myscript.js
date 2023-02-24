@@ -35,7 +35,7 @@ async function API(startDate, endDate) {
         startDate: startDate,
         endDate: endDate
     }
-    const data = await fetch('http://localhost:8080/api', {
+    const data = await fetch('https://faid.onrender.com/api', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
